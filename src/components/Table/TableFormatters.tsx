@@ -1,4 +1,5 @@
 import { Car, CarStatus, StatusDisplayData } from '../../lib/types'
+import { Link } from 'react-router-dom'
 import cn from 'classnames'
 import styles from './table.module.css'
 
@@ -29,10 +30,9 @@ export const Row = ({ car }: {car: Car}) => {
 }
 
 
-export const IdLink = ({id}: {id: number}) => {
-    // TODO: add click function
-    return (<a>{id}</a>)
-}
+export const IdLink = ({id}: {id: number}) => (
+    <Link to={`/profile/${id}`}>{id}</Link>
+)
 
 
 export const Status = ({status}: {status: CarStatus}) => {
