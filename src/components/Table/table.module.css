@@ -1,0 +1,34 @@
+table, 
+th, 
+td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: .5rem 1rem;
+}
+
+.statusWrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.indicator.success {
+    background-color: mediumseagreen;
+}
+
+.indicator.warning {
+    background-color: goldenrod;
+}
+
+.indicator.danger {
+    background-color: crimson;
+}
+

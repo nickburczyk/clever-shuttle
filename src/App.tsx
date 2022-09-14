@@ -1,14 +1,9 @@
 import { Header, Footer } from "./components/HeaderAndFooter/HeaderAndFooter";
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import useAllCars from "./hooks/useAllCars";
 import "./App.css"
+import AllCars from "./pages/All";
 
 function App() {
-  const {cars, updateCars} = useAllCars()
-
-  if (!cars) return <>Loading...</>
-  console.log(cars)
-  
   return (
     <BrowserRouter>
       <div className="App">
@@ -16,12 +11,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route 
-              path="/all" 
-              element={
-                <>All Cars List</>
-              }
-            />
+            <Route path="/all" element={<AllCars/>} />
 
             <Route 
               path="/lookup"

@@ -14,3 +14,8 @@ export enum CarStatus {
     'in-maintenance',
     'out-of-service',
 }
+
+export type StatusDisplayData = {
+    className: string; 
+    display: String
+}
