@@ -10,3 +10,12 @@ export const fetchCarsList = async():Promise<Car[]> => {
     const data = await res.json()
     return data
 }
+
+export const fetchCar = async(id: string|number):Promise<Car> => {
+    const url = API_ADDRESS + "/" + id
+    const res = await fetch(url, {
+        method: "GET",
+    })
+    const data = await res.json()
+    return data
+}

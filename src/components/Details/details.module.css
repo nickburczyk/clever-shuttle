@@ -1,0 +1,14 @@
+.detailsWrapper {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    padding: .25rem
+}
+
+.rowLabel {
+    min-width: 150px;
+    font-weight: bold;
+}

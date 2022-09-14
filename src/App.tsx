@@ -2,6 +2,7 @@ import { Header, Footer } from "./components/HeaderAndFooter/HeaderAndFooter";
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import "./App.css"
 import AllCars from "./pages/All";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -13,19 +14,8 @@ function App() {
           <Routes>
             <Route path="/all" element={<AllCars/>} />
 
-            <Route 
-              path="/lookup"
-              element={
-                <>Lookup Individual Car</>
-              }  
-            />
-
-            <Route 
-              path="/profile"
-              element={
-                <>Individual Car Profile</>
-              }  
-            />  
+            <Route path="/profile" element={<Profile/>}  />  
+            <Route path="/profile/:id" element={<Profile/>}  />  
 
             <Route 
               path="/"
