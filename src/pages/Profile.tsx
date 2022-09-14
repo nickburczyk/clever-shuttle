@@ -16,7 +16,7 @@ const Profile = () => {
             <h1>Car Details</h1>
             <Details car={car}/>
             <button 
-                className="btn-primary" 
+                className="btn primary" 
                 onClick={() => nav("/")}
             > 
                 {"< Back Home"}
