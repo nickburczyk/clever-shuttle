@@ -1,0 +1,16 @@
+.header {
+    padding: 2rem 3rem;
+    font-size: 24px;
+    background-color: #00C763;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 3rem;
+    font-size: 14px;
+    background-color: #d8dddb;
+    color: #1e4b32;
+}
