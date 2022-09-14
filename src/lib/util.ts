@@ -16,6 +16,9 @@ export const fetchCar = async(id: string|number):Promise<Car> => {
     const res = await fetch(url, {
         method: "GET",
     })
-    const data = await res.json()
-    return data
+
+    if (res.status === 400) throw new Error("Bad Request")
+    if (res.status === 404) throw new Error("Not Found. Go Fish!")
+
+    return await res.json()
 }

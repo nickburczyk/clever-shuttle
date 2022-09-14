@@ -5,11 +5,11 @@ import useCar from "../hooks/useCar"
 const Profile = () => {
     const { id } = useParams()
     const nav = useNavigate()
-    const { car } = useCar(id || "")
+    const { car, error, resolved } = useCar(id)
 
-    if (!id) return <>Please provide an ID</>
-
-    if (!car) return <>Loading...</>
+    if (!id) return <>No ID provided.</>
+    if (!resolved) return <>Loading...</>
+    if (error) return <>{error}</>
 
     return (
         <>
