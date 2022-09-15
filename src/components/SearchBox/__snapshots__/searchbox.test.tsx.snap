@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box should render 1`] = `
+<div
+  className="wrapper"
+>
+  <input
+    className="input"
+    onChange={[Function]}
+    placeholder="Search by ID"
+    value=""
+  />
+  <button
+    className="btn primary searchBtn"
+    onClick={[Function]}
+  >
+    GO
+  </button>
+</div>
+`;
