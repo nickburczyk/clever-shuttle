@@ -20,9 +20,18 @@
     text-decoration: none;
 }
 
+.btn:not(:last-of-type) {
+    margin-right: 1rem;
+}
+
 .btn.primary {
     background-color: #00C763;
     color: white;
+}
+
+.btn.secondary {
+    background-color: #d8dddb;
+    color: #1e4b32
 }
 
 input {

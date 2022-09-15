@@ -15,7 +15,7 @@ const SearchBox = () => {
     }
 
     const handleSearch = () => {
-        nav(`./profile/${query}`)
+        nav(`/profile/${query}`)
     }
 
     return (
