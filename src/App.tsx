@@ -4,6 +4,7 @@ import "./App.css"
 import AllCars from "./pages/All";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
+import Create from "./pages/Create";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/all" element={<AllCars/>} />
-            <Route path="/profile" element={<Profile/>}  />  
-            <Route path="/profile/:id" element={<Profile/>}  />  
+            <Route path="/profile" element={<Profile/>} />  
+            <Route path="/profile/:id" element={<Profile/>} />  
+            <Route path="/create" element={<Create/>} />
           </Routes>
         </main>
 

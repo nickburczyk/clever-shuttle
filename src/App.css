@@ -24,3 +24,8 @@
     background-color: #00C763;
     color: white;
 }
+
+input {
+    padding: .5rem 1rem;
+    border: 1px solid #d8dddb;
+}
