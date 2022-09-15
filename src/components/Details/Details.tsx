@@ -12,14 +12,14 @@ const Details = ({
     }
 }: Props) => (
     <div className={styles.detailsWrapper}>
-        <Row label="ID" val={id.toString()}/>
-        <Row label="Brand" val={brand}/>
-        <Row label="Manufacturer" val={manufacturer}/>
-        <Row label="License Plate" val={licensePlate}/>
-        <Row label="Operation City" val={operationCity}/>
-        <Row label="Status" val={status?.toString() || ""}/>
-        <Row label="CreatedAt" val={createdAt.toString()}/>
-        <Row label="LastUpdatedAt" val={lastUpdatedAt.toString()}/>
+        <Row label="ID" val={id.toString()} />
+        <Row label="Brand" val={brand} />
+        <Row label="Manufacturer" val={manufacturer} />
+        <Row label="License Plate" val={licensePlate} />
+        <Row label="Operation City" val={operationCity} />
+        <Row label="Status" val={status?.toString() || ""} />
+        <Row label="CreatedAt" val={createdAt.toString()} />
+        <Row label="LastUpdatedAt" val={lastUpdatedAt.toString()} />
     </div>
 )
 
@@ -35,7 +35,7 @@ interface RowProps {
 
 const Row = ({label, val}: RowProps) => (
     <div className={styles.row}>
-        <div className={styles.rowLabel}>{label}: </div>
-        <div className={styles.rowValue}>{val && val}</div>
+        <div data-testid={`detail-label`} className={styles.rowLabel}>{label}: </div>
+        {!!val && <div data-testid={`detail-value`} className={styles.rowValue}>{val}</div>}
     </div>
 )

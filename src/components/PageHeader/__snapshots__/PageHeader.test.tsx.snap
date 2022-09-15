@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box should render with title \`Hello World\` 1`] = `
+<div
+  className="heading"
+>
+  <button
+    className="btn secondary"
+    onClick={[Function]}
+  >
+     &lt; 
+  </button>
+  <h1>
+    Hello World!
+  </h1>
+</div>
+`;
+
+exports[`Search Box should render with title \`Welcome to the thunderdome!\` 1`] = `
+<div
+  className="heading"
+>
+  <button
+    className="btn secondary"
+    onClick={[Function]}
+  >
+     &lt; 
+  </button>
+  <h1>
+    Welcome to the thunderdome
+  </h1>
+</div>
+`;

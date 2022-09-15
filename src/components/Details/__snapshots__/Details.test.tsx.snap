@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen Details Display should match snapshot 1`] = `
+<div
+  className="detailsWrapper"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      ID
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      11111
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      Brand
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      ID Buzz
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      Manufacturer
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      VW
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      License Plate
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      D-HKY 630
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      Operation City
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      Hannover
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      Status
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      available
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      CreatedAt
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      Sat Jan 01 2022 01:00:00 GMT+0100 (Central European Standard Time)
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="rowLabel"
+      data-testid="detail-label"
+    >
+      LastUpdatedAt
+      : 
+    </div>
+    <div
+      className="rowValue"
+      data-testid="detail-value"
+    >
+      Wed Sep 14 2022 02:00:00 GMT+0200 (Central European Summer Time)
+    </div>
+  </div>
+</div>
+`;

@@ -38,7 +38,7 @@ export const IdLink = ({id}: {id: number}) => (
 
 
 export const Status = ({status}: {status: CarStatus}) => {
-    const displayData: {[key in keyof typeof CarStatus]:StatusDisplayData} = {
+    const displayData: {[key in CarStatus]:StatusDisplayData} = {
         "available": { className: 'success', display: "Available" },
         "in-maintenance": { className: 'warning', display: "In Maintenance" },
         "out-of-service":{ className: 'danger', display: "Out Of Service" }

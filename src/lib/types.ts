@@ -9,11 +9,11 @@ export type Car = {
     lastUpdatedAt: Date
 }
 
-export enum CarStatus {
-    'available',
-    'in-maintenance',
-    'out-of-service',
-}
+export type CarStatus =
+    'available' |
+    'in-maintenance' |
+    'out-of-service'
+
 
 export type CreateCarPayload = Pick<Car, 
     "id" | "brand" | "licensePlate" | "manufacturer" | "operationCity" | "status"
