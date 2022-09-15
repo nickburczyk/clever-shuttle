@@ -6,15 +6,16 @@ export const fetchCarsList = async():Promise<Car[]> => {
     const url = API_ADDRESS 
     const res = await fetch(url, {
         method: "GET",
+        mode: 'cors'
     })
-    const data = await res.json()
-    return data
+    return await res.json()
 }
 
 export const fetchCar = async(id: string|number):Promise<Car> => {
     const url = API_ADDRESS + "/" + id
     const res = await fetch(url, {
         method: "GET",
+        mode: 'cors'
     })
 
     if (res.status === 400) throw new Error("Bad Request")
@@ -23,14 +24,37 @@ export const fetchCar = async(id: string|number):Promise<Car> => {
     return await res.json()
 }
 
-export const createCar = async(body: CreateCarPayload):Promise<Car> => {
+export const createOrUpdateCar = async(body: CreateCarPayload):Promise<Car> => {
     const url = API_ADDRESS + "/" + body.id
+    const existsRes = await fetch(url)
+    
+    if (existsRes.status === 400 || existsRes.status === 404) {
+        const res = await fetch(url, {
+            method: "PUT",
+            mode: 'cors',
+            body: JSON.stringify(body)
+        })
+
+        if (res.status === 400) throw new Error("Bad Request")
+    
+        return await res.json()
+    } 
+
+    const exists = await existsRes.json()
+    const { createdAt } = exists
+    
     const res = await fetch(url, {
         method: "PUT",
-        body: JSON.stringify(body)
+        mode: 'cors',
+        body: JSON.stringify({
+            ...body,
+            createdAt,
+            lastUpdatedAt: new Date(),
+        })
     })
 
-    if (res.status === 400) throw new Error("Bad Request")
+    if (res.status === 400) throw new Error("Bad Request: No Status Given")
 
     return await res.json()
+
 }

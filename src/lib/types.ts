@@ -18,6 +18,7 @@ export enum CarStatus {
 export type CreateCarPayload = Pick<Car, 
     "id" | "brand" | "licensePlate" | "manufacturer" | "operationCity" | "status"
 >
+
 export type StatusDisplayData = {
     className: string; 
     display: String

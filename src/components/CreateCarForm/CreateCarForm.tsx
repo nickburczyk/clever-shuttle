@@ -3,14 +3,14 @@ import { CreateCarPayload } from "../../lib/types"
 import styles from './style.module.css'
 import cn from 'classnames'
 import FormInput from "./FormInput"
+import useCreateCar from "../../hooks/useCreateCar"
 const shortid = require('shortid')
 
 const { form, submit } = styles
 const CreateCarForm = () => {
+    const { createCar } = useCreateCar()
     const [error, setError] = useState<string|null>(null)
-    const [formData, setFormData] = useState<CreateCarPayload>({
-        id: 0,
-    })
+    const [formData, setFormData] = useState<CreateCarPayload>({ id: 0 })
     
     const handleInput = (e: {target: HTMLInputElement|HTMLSelectElement}): void => {
         setError(null)
@@ -28,11 +28,9 @@ const CreateCarForm = () => {
             setError("ID is required")
             return
         }
-        //TODO: SUBMIT
-        console.log("submitted!")
-        // THEN: NAVIGATE to /profile/NEWID
+        createCar(formData)
     }
-    console.log("FORM", formData)
+
     return (
         <form className={form} onSubmit={e => handleSubmit(e)}>
             <FormInput
