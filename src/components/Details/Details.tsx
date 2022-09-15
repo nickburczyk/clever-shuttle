@@ -7,12 +7,14 @@ const Details = ({
     car: {
         id, brand, licensePlate,
         operationCity, status,
-        createdAt, lastUpdatedAt
+        createdAt, lastUpdatedAt,
+        manufacturer
     }
 }: Props) => (
     <div className={styles.detailsWrapper}>
         <Row label="ID" val={id.toString()}/>
         <Row label="Brand" val={brand}/>
+        <Row label="Manufacturer" val={manufacturer}/>
         <Row label="License Plate" val={licensePlate}/>
         <Row label="Operation City" val={operationCity}/>
         <Row label="Status" val={status?.toString() || ""}/>

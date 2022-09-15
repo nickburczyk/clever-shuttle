@@ -13,6 +13,7 @@ const Table = ({cars}: Props) => {
                 <tr>
                     <th>ID</th>
                     <th>Brand</th>
+                    <th>Manufacturer</th>
                     <th>License Plate</th>
                     <th>City</th>
                     <th>Status</th>

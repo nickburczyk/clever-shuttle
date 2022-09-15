@@ -8,7 +8,8 @@ export const Row = ({ car }: {car: Car}) => {
     const { 
         id, brand, licensePlate, 
         operationCity, status, 
-        createdAt, lastUpdatedAt
+        createdAt, lastUpdatedAt,
+        manufacturer
     } = car
 
     // debug later. "invalid time format" error
@@ -20,6 +21,7 @@ export const Row = ({ car }: {car: Car}) => {
         <tr>
             <td>{id && <IdLink id={id}/>}</td>
             <td>{brand && brand}</td>
+            <td>{manufacturer && manufacturer}</td>
             <td>{licensePlate && licensePlate}</td>
             <td>{operationCity && operationCity}</td>
             <td>{status && <Status status={status}/>}</td>
